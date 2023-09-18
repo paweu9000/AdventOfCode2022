@@ -40,8 +40,11 @@ for i in craneStack:
         inc accum
 
 for todo in todos:
+    var tempQue: Deque[char]
     for i in 1..todo.move:
-        queues[todo.to-1].addFirst(queues[todo.fro-1].popFirst)
+        tempQue.addLast(queues[todo.fro-1].popFirst)
+    for i in 0..tempQue.len-1:
+        queues[todo.to-1].addFirst(tempQue.popLast)
 
 var result: string
 
