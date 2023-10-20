@@ -34,6 +34,7 @@ int main() {
     while (getline(file, line)) {
         sum += get_winner(line[0], line[2]);
     }
+    file.close();
     cout << sum;
     return 0;
 }
