@@ -22,6 +22,8 @@ int main() {
         }
     }
     if (sum > 0) ints.push_back(sum);
-    cout << *max_element(ints.begin(), ints.end());
+    cout << *max_element(ints.begin(), ints.end()) << endl;
+    sort(ints.rbegin(), ints.rend());
+    cout << ints[0] + ints[1] + ints[2] << endl;
     return 0;
 }
